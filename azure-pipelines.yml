@@ -18,6 +18,6 @@ steps:
     resourceGroupName: 'cloud-shell-storage-centralindia'
     location: 'East Asia'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/Kratika28-agr/MyRepo/main/azuredeploy.json'
+    csmFileLink: 'https://raw.githubusercontent.com/Kratika28-agr/MyRepo/main/storagge.json'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
