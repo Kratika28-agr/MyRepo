@@ -1,0 +1,64 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "storageAccountName": {
+        "type": "string",
+        "metadata": {
+          "description": "csg100320022185c0cb"
+        }
+      },
+      "location": {
+        "type": "string",
+        "metadata": {
+          "description": "East Asia"
+        }
+      },
+      "storageSKU": {
+        "type": "string",
+        "defaultValue": "Standard_LRS",
+        "allowedValues": [
+          "Standard_LRS",
+          "Standard_GRS",
+          "Standard_RAGRS",
+          "Standard_ZRS",
+          "Premium_LRS",
+          "Premium_ZRS",
+          "Standard_GZRS",
+          "Standard_RAGZRS"
+        ],
+        "metadata": {
+          "description": "StorageV2 (general purpose v2)"
+        }
+      }
+    },
+    "resources": [
+      {
+        "type": "Microsoft.Storage/storageAccounts",
+        "apiVersion": "2021-04-01",
+        "name": "csg100320022185c0cb",
+        "location": "East Asia",
+        "sku": {
+          "name": "Standard_LRS"
+        },
+        "kind": "StorageV2",
+        "properties": {
+          "supportsHttpsTrafficOnly": true
+        }
+      }
+    ],
+    "outputs": {
+      "storageEndpoint": {
+        "type": "object",
+        "value": "[parameters('storageAccountName')]"
+      },
+      "output1": {
+        "type": "string",
+        "value": "[parameters('location')]"
+      },
+      "output2": {
+        "type": "string",
+        "value": "[parameters('storageSKU')]"
+      }
+    }
+  }
