@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageAccountName": {
+            "value": "csg100320022185c0cb" // TODO: Fill in parameter value
+        },
+        "location": {
+            "value": "East Asia" // TODO: Fill in parameter value
+        },
+        "storageSKU": {
+            "value": "Standard_LRS"
+        },
+        "resources": [
+            {
+              "type": "Microsoft.Storage/storageAccounts",
+              "apiVersion": "2021-04-01",
+              "name": "csg100320022185c0cb",
+              "location": "East Asia",
+              "sku": {
+                "name": "Standard_LRS"
+              },
+              "kind": "StorageV2",
+              "properties": {
+                "supportsHttpsTrafficOnly": true
+              }
+            }
+          ]
+    }
+}
